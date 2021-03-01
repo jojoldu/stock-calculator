@@ -1,13 +1,12 @@
-import {analyze} from './lib';
+import {init, addRound} from './lib';
 
-const el = document.getElementById("analyze");
-el.addEventListener("click", render, false);
+const el = document.getElementById("init");
+el.addEventListener("click", init, false);
 
-async function render() {
+function init() {
     onLoad();
     const blogName = document.getElementById("blogName").value;
     const accessToken = document.getElementById("accessToken").value;
-    const dateCounts = await analyze(accessToken, blogName);
     $('#table').bootstrapTable({
         pagination: true,
         search: true,
