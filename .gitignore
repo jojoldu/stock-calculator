@@ -4,4 +4,3 @@ node_modules
 *.iml
 public/js
 *.real.test.js
-tistory.http
